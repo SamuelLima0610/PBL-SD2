@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Nov 22 15:46:36 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : problema2Esp
+Top-level Entity Name : arquiteturaUart
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 1,806 / 22,320 ( 8 % )
+    Total combinational functions : 1,694 / 22,320 ( 8 % )
+    Dedicated logic registers : 994 / 22,320 ( 4 % )
+Total registers : 994
+Total pins : 3 / 154 ( 2 % )
+Total virtual pins : 0
+Total memory bits : 181,504 / 608,256 ( 30 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

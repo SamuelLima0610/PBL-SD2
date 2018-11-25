@@ -174,26 +174,30 @@ void readUart(){
 
 void sendData(int escolha){
 	int z;
-	//pacote controle 0x\10\12\00\04\MQTT\04\02\00\14\00\06\Nios 2
-	//Padrão de envio.
-    //Envio do connect, publish, disconnect a cada envio de uma nova mensagem.
-	//comando uart para mandar pacote
 	char comandoSendC[] = "AT+CIPSEND=19";
-	//Mqtt 2
+	//pacote controle 0x\10\11\00\04\MQTT\04\02\00\14\00\05\Nios2
 	char console[] = {0x10 , 0x11 , 0x00 , 0x04 , 0x4d , 0x51 ,0x54 ,0x54, 0x04 , 0x02 , 0x00 , 0x14 , 0x00 , 0x06 , 0x4d , 0x51 , 0x54 , 0x54 , 0x32};
+
+	//pacote disconnect
 	char disconnect[] = {0xe0 , 0x00};
+	char comandoD[] = "AT+CIPSEND=2";
+
+	//pacote publisher1 0x\30\18\00\0c\teste\teste1\HelloWorld
+	//(1)topico teste/teste1 mensagem HelloWorld
 	char publish1[] = {0x30, 0x18, 0x00, 0x0C,
 				0x74, 0x65, 0x73, 0x74, 0x65, 0x2f, 0x74, 0x65, 0x73, 0x74, 0x65, 0x31,
 				0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x57, 0x6F, 0x72, 0x6C, 0x64};
-	char publish2[] = {0x30 , 0x00 , 0x0b , 0x00 , 0x03 , 0x50 , 0x42 ,0x4c , 0x4f , 0x50 , 0x43 , 0x41 , 0x4f , 0x32};
-	char publish3[] = {0x30 , 0x00 , 0x0b , 0x00 , 0x03 , 0x50 , 0x42 ,0x4c , 0x4f , 0x50 , 0x43 , 0x41 , 0x4f , 0x33};
-	char publish4[] = {0x30 , 0x00 , 0x0b , 0x00 , 0x03 , 0x50 , 0x42 ,0x4c , 0x4f , 0x50 , 0x43 , 0x41 , 0x4f , 0x34};
-	char publish5[] = {0x30 , 0x00 , 0x0b , 0x00 , 0x03 , 0x50 , 0x42 ,0x4c , 0x4f , 0x50 , 0x43 , 0x41 , 0x4f , 0x35};
+
+	//publish 0x\30\0b\00\03\PBL\Opcao1
+	//(2) topico PBL mensagem opcao1
+	char publish[] = {0x30 , 0x0b , 0x00 , 0x03 ,
+				0x50 , 0x42 ,0x4c,
+				0x4f , 0x50 , 0x43 , 0x41 , 0x4f , 0x32};
+
+	//(1) - 26 (2) - 12
+	// a depender do pacote deve mudar para os valores que estao em cima
 	char comandoSendP[] = "AT+CIPSEND=26";
-
-
-	writenUart(comandoSendC , strlen(comandoSendC)); //"AT+CIPSEND=18"
-
+	writenUart(comandoSendC , strlen(comandoSendC)); //"AT+CIPSEND=19"
 	for(z = 0 ; z < sizeof(console); z++){
 		printf("%c", console[z]);
 		writenUartQuick(1, console[z]);
@@ -202,49 +206,45 @@ void sendData(int escolha){
 	usleep(1000);
 	IOWR_ALTERA_AVALON_UART_TXDATA(UART_0_BASE, '\n');
 
-	writenUart(comandoSendP,strlen(comandoSendP));
-	//pacote publisher 0x\30\0f\00\03\PBL\opcao1
+	writenUart(comandoSendP,strlen(comandoSendP)); //"AT+CIPSEND=26" ou 12
 	switch(escolha){
 		case 1:
 			for(z = 0 ; z < sizeof(publish1); z++){
-				printf("%c", publish1[z]);
+				printf("%c", publish1[z]); // pode testar com publish ou publish1
 				writenUartQuick(1, publish1[z]);
 			}
 			IOWR_ALTERA_AVALON_UART_TXDATA(UART_0_BASE, '\r');
 			usleep(1000);
 			IOWR_ALTERA_AVALON_UART_TXDATA(UART_0_BASE, '\n');
-			//writenUart(comandoSend , strlen(comandoSend) , 2); //AT+CIPSEND=
-			//writenUart(publish1,strlen(publish1) );
-			//usleep(1000);
 			break;
 		case 2:
 			//writenUart(comandoSend , strlen(comandoSend) , 2); //AT+CIPSEND=
-			writenUart(publish2,strlen(publish2) );
-			usleep(1000);
+			//writenUart(publish2,strlen(publish2) );
+			//usleep(1000);
 			break;
 		case 3:
 			//writenUart(comandoSend , strlen(comandoSend) , 2); //AT+CIPSEND=
-			writenUart(publish3,strlen(publish3));
-			usleep(1000);
+			//writenUart(publish3,strlen(publish3));
+			//usleep(1000);
 			break;
 		case 4:
 			//writenUart(comandoSend , strlen(comandoSend) , 2); //AT+CIPSEND=
-			writenUart(publish4,strlen(publish4));
-			usleep(1000);
+			//writenUart(publish4,strlen(publish4));
+			//usleep(1000);
 			break;
 		case 5:
 			//writenUart(comandoSend , strlen(comandoSend) , 2); //AT+CIPSEND=
-			writenUart(publish5,strlen(publish5));
-			usleep(1000);
+			//writenUart(publish5,strlen(publish5));
+			//usleep(1000);
 			break;
 	}
-	//pacote publisher 0x\30\0f\00\02\SD\Hello World
-	//pacote controle 0x\10\12\00\04\MQTT\04\02\00\14\00\06\Nios 2
-	// apos mandar o pacote tem que receber um pacote CONNACK
-	//pacote publisher 0x\30\0f\00\03\PBL\Hello World
-	//pacote disconnect 0x\e0\00
-	//writenUart(comandoSend , strlen(comandoSend) , 2); //AT+CIPSEND=
-	//writenUart(disconnect,strlen(disconnect) , 1);
+	for(z = 0 ; z < sizeof(disconnect); z++){
+			printf("%c", disconnect[z]);
+			writenUartQuick(1, disconnect[z]);
+		}
+	IOWR_ALTERA_AVALON_UART_TXDATA(UART_0_BASE, '\r');
+	usleep(1000);
+	IOWR_ALTERA_AVALON_UART_TXDATA(UART_0_BASE, '\n');
 	usleep(1000);
 }
 

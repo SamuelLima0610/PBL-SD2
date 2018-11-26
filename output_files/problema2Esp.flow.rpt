@@ -1,5 +1,5 @@
 Flow report for problema2Esp
-Thu Nov 22 15:46:57 2018
+Sun Nov 25 16:21:21 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 22 15:46:47 2018       ;
+; Flow Status                        ; Successful - Sun Nov 25 16:21:10 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; problema2Esp                                ;
 ; Top-level Entity Name              ; arquiteturaUart                             ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/22/2018 15:44:35 ;
+; Start date & time ; 11/25/2018 16:18:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; problema2Esp        ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+------------+
 ; Assignment Name                     ; Value                                                             ; Default Value ; Entity Name     ; Section Id ;
 +-------------------------------------+-------------------------------------------------------------------+---------------+-----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 167690714083003.154290867414760                                   ; --            ; --              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 41826075555329.154316990211260                                    ; --            ; --              ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                ; --            ; --              ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                 ; --            ; --              ; --         ;
 ; MISC_FILE                           ; arquiteturaUart/synthesis/../arquiteturaUart.cmp                  ; --            ; --              ; --         ;
@@ -101,11 +101,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:23     ; 1.0                     ; 4910 MB             ; 00:01:43                           ;
-; Fitter               ; 00:00:31     ; 1.0                     ; 5335 MB             ; 00:00:23                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4706 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.0                     ; 4806 MB             ; 00:00:07                           ;
-; Total                ; 00:02:08     ; --                      ; --                  ; 00:02:17                           ;
+; Analysis & Synthesis ; 00:01:49     ; 1.0                     ; 4891 MB             ; 00:02:32                           ;
+; Fitter               ; 00:00:28     ; 1.0                     ; 5240 MB             ; 00:00:25                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4694 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.1                     ; 4782 MB             ; 00:00:08                           ;
+; Total                ; 00:02:30     ; --                      ; --                  ; 00:03:10                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,10 +114,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-7S5R87VE  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LAPTOP-7S5R87VE  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LAPTOP-7S5R87VE  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LAPTOP-7S5R87VE  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-GCQO51Q  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-GCQO51Q  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-GCQO51Q  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-GCQO51Q  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

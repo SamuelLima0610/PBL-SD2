@@ -1,5 +1,5 @@
 Fitter report for problema2Esp
-Thu Nov 22 15:46:36 2018
+Sun Nov 25 16:20:58 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Nov 22 15:46:36 2018       ;
+; Fitter Status                      ; Successful - Sun Nov 25 16:20:58 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; problema2Esp                                ;
 ; Top-level Entity Name              ; arquiteturaUart                             ;
@@ -155,12 +155,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
+; Average used               ; 1.03        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.3%      ;
+;     Processor 2            ;   2.6%      ;
 +----------------------------+-------------+
 
 
@@ -220,7 +220,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/lsjsa/Desktop/Trabalho/problema2Esp/output_files/problema2Esp.pin.
+The pin-out file can be found in C:/Users/Gabriel/Desktop/PBL-SD2/output_files/problema2Esp.pin.
 
 
 +--------------------------------------------------------------------------+
@@ -1963,17 +1963,17 @@ Info (332111): Found 1 clocks
     Info (332111):   Period   Clock Name
     Info (332111): ======== ============
     Info (332111):  100.000 altera_reserved_tck
-Info (176353): Automatically promoted node clk_clk~input (placed in PIN R8 (CLK15, DIFFCLK_6p)) File: C:/Users/lsjsa/Desktop/Trabalho/problema2Esp/arquiteturaUart/synthesis/arquiteturaUart.v Line: 7
+Info (176353): Automatically promoted node clk_clk~input (placed in PIN R8 (CLK15, DIFFCLK_6p)) File: C:/Users/Gabriel/Desktop/PBL-SD2/arquiteturaUart/synthesis/arquiteturaUart.v Line: 7
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G18
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node altera_reset_controller:rst_controller|r_sync_rst  File: C:/Users/lsjsa/Desktop/Trabalho/problema2Esp/arquiteturaUart/synthesis/submodules/altera_reset_controller.v Line: 288
+Info (176353): Automatically promoted node altera_reset_controller:rst_controller|r_sync_rst  File: C:/Users/Gabriel/Desktop/PBL-SD2/arquiteturaUart/synthesis/submodules/altera_reset_controller.v Line: 288
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node altera_reset_controller:rst_controller|WideOr0~0 File: C:/Users/lsjsa/Desktop/Trabalho/problema2Esp/arquiteturaUart/synthesis/submodules/altera_reset_controller.v Line: 290
-        Info (176357): Destination node arquiteturaUart_nios2_gen2_0:nios2_gen2_0|arquiteturaUart_nios2_gen2_0_cpu:cpu|W_rf_wren File: C:/Users/lsjsa/Desktop/Trabalho/problema2Esp/arquiteturaUart/synthesis/submodules/arquiteturaUart_nios2_gen2_0_cpu.v Line: 3451
+        Info (176357): Destination node altera_reset_controller:rst_controller|WideOr0~0 File: C:/Users/Gabriel/Desktop/PBL-SD2/arquiteturaUart/synthesis/submodules/altera_reset_controller.v Line: 290
+        Info (176357): Destination node arquiteturaUart_nios2_gen2_0:nios2_gen2_0|arquiteturaUart_nios2_gen2_0_cpu:cpu|W_rf_wren File: C:/Users/Gabriel/Desktop/PBL-SD2/arquiteturaUart/synthesis/submodules/arquiteturaUart_nios2_gen2_0_cpu.v Line: 3451
         Info (176357): Destination node arquiteturaUart_nios2_gen2_0:nios2_gen2_0|arquiteturaUart_nios2_gen2_0_cpu:cpu|arquiteturaUart_nios2_gen2_0_cpu_nios2_oci:the_arquiteturaUart_nios2_gen2_0_cpu_nios2_oci|arquiteturaUart_nios2_gen2_0_cpu_nios2_oci_debug:the_arquiteturaUart_nios2_gen2_0_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer|din_s1 File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_std_synchronizer.v Line: 45
-Info (176353): Automatically promoted node arquiteturaUart_nios2_gen2_0:nios2_gen2_0|arquiteturaUart_nios2_gen2_0_cpu:cpu|arquiteturaUart_nios2_gen2_0_cpu_nios2_oci:the_arquiteturaUart_nios2_gen2_0_cpu_nios2_oci|arquiteturaUart_nios2_gen2_0_cpu_nios2_oci_debug:the_arquiteturaUart_nios2_gen2_0_cpu_nios2_oci_debug|resetrequest  File: C:/Users/lsjsa/Desktop/Trabalho/problema2Esp/arquiteturaUart/synthesis/submodules/arquiteturaUart_nios2_gen2_0_cpu.v Line: 186
+Info (176353): Automatically promoted node arquiteturaUart_nios2_gen2_0:nios2_gen2_0|arquiteturaUart_nios2_gen2_0_cpu:cpu|arquiteturaUart_nios2_gen2_0_cpu_nios2_oci:the_arquiteturaUart_nios2_gen2_0_cpu_nios2_oci|arquiteturaUart_nios2_gen2_0_cpu_nios2_oci_debug:the_arquiteturaUart_nios2_gen2_0_cpu_nios2_oci_debug|resetrequest  File: C:/Users/Gabriel/Desktop/PBL-SD2/arquiteturaUart/synthesis/submodules/arquiteturaUart_nios2_gen2_0_cpu.v Line: 186
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1992,23 +1992,23 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.55 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.58 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
-Info (144001): Generated suppressed messages file C:/Users/lsjsa/Desktop/Trabalho/problema2Esp/output_files/problema2Esp.fit.smsg
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (144001): Generated suppressed messages file C:/Users/Gabriel/Desktop/PBL-SD2/output_files/problema2Esp.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 5335 megabytes
-    Info: Processing ended: Thu Nov 22 15:46:38 2018
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 5240 megabytes
+    Info: Processing ended: Sun Nov 25 16:21:00 2018
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/lsjsa/Desktop/Trabalho/problema2Esp/output_files/problema2Esp.fit.smsg.
+The suppressed messages can be found in C:/Users/Gabriel/Desktop/PBL-SD2/output_files/problema2Esp.fit.smsg.
 
 

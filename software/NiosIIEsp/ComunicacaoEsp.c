@@ -96,7 +96,6 @@ int main()
   char comandoAT1[] = "AT";
   char comandoAT2[] = "AT+RST";
   char comandoAT3[] = "AT+CWJAP=\"WLessLEDS\",\"HelloWorldMP31\"";
-  //char comandoAT4[] = "AT+CIFSR";
   char comandoAT5[] = "AT+CIPSTART=\"TCP\",\"192.168.1.103\",1883";
 
 
@@ -104,26 +103,18 @@ int main()
   readUart();
   usleep(300000);
 
-  /*writenUart(comandoAT2 , strlen(comandoAT2) ,1);
-  readUart();
-  usleep(300000);*/
-
   writenUart(comandoAT3 , strlen(comandoAT3));
   readUart();
   usleep(300000);
-
-  /*writenUart(comandoAT4 , strlen(comandoAT4) ,1);
-  readUart();
-  usleep(300000);*/
 
   writenUart(comandoAT5 , strlen(comandoAT5) );
   readUart();
   usleep(300000);
   sendData(1);
+
   /* Event loop never exits. */
   while (1){
 	  alt_putstr("Funciona");
-	  //alt_putstr("teste");
 	  break;
   }
 
